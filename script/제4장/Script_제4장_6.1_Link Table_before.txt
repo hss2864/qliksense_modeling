@@ -1,0 +1,23 @@
+Order:
+LOAD
+    고객ID, 날짜, 구매번호, 수량, 금액
+FROM [lib://Local/모델링편/example_Link Table.xlsx]
+(ooxml, embedded labels, table is Order);
+
+Delivery:
+LOAD
+    고객ID, 날짜, 배송ID, 송장번호, 송장수
+FROM [lib://Local/모델링편/example_Link Table.xlsx]
+(ooxml, embedded labels, table is Delivery);
+
+Customer:
+LOAD
+    고객ID, 이메일, 고객명, 성별, 연락처
+FROM [lib://Local/모델링편/example_Link Table.xlsx]
+(ooxml, embedded labels, table is Customer);
+
+Calendar:
+LOAD
+    날짜, 연도, 월, 일
+FROM [lib://Local/모델링편/example_Link Table.xlsx]
+(ooxml, embedded labels, table is Calendar);

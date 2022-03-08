@@ -1,0 +1,7 @@
+// Where절: 조건1=2017년, 조건2=남성
+Sales:
+LOAD * 
+FROM [lib://Local/입문편/Sales.xlsx]
+(ooxml, embedded labels, table is Sales)
+Where OrderDate >= '2017-01-01' and OrderDate <= '2017-12-31'
+  and Gender = 'Male';

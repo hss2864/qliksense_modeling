@@ -1,0 +1,26 @@
+// Preventing concatenation
+Sales2020:
+LOAD
+    OrderID,
+    OrderDate,
+    Revenue,
+    Cost
+FROM [lib://Local/모델링편/example_Concatenate.xlsx]
+(ooxml, embedded labels, table is [Sales 2020]);
+
+/* NoConcatenate 접두사 미선언 시 Sales2020에 "자동 결합"되고,
+   "Sales_1M" 테이블은 생성되지 않기 때문에 오류 발생 */
+NoConcatenate
+Sales_1M:
+Load 
+    OrderID,
+    OrderDate,
+    Revenue,
+    Cost
+Resident Sales2020
+Where Month(OrderDate)='1월';
+
+SUM:
+Load Sum(Revenue) as Sum_1M
+Resident Sales_1M;
+Drop Table Sales_1M;

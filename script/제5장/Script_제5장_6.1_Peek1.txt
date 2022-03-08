@@ -1,0 +1,15 @@
+// Peek 함수의 행 번호 Default = -1
+
+PeekTable:
+LOAD
+    "Row",
+    "Type",
+    RowNo()-1 as RowIndex,
+    Peek('Type', -2) as sample_minus2,
+    Peek('Type')     as sample_minus1,
+    Peek('Type', 0)  as sample_zero,
+    Peek('Type', 1)  as sample_plus1,
+    Peek('Type', 2)  as sample_plus2,
+    Peek('Type', 2, 'Peek1') as sample_tablenm
+FROM [lib://Local/모델링편/example_Peek.xlsx]
+(ooxml, embedded labels, table is Peek1);

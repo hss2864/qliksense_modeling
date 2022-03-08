@@ -1,0 +1,26 @@
+/* -- 1. Back Up Settings -- */
+Let vToday = Date(Today(),'YYYYMMDD');						 	// 실행일(당일)
+Let vToday_2wk = Date(today()-15,'YYYYMMDD');				   // 실행일 기준 2주전 (백업 유지 2주)
+Let vTarget_Folder = 'C:\Users\hong\Downloads\모델링편\' ;		// 데이터 폴더
+Let vBack_Folder = 'C:\Users\hong\Desktop\QlikSense_BackUp\' ;	// 백업 폴더
+
+Trace 실행일: $(vToday)   |   백업관리 기준일: $(vToday_2wk);		// 날짜 확인
+Trace 데이터 폴더 경로: $(vTarget_Folder);						   // 데이터 폴더 경로 확인
+Trace 백업 폴더 경로: $(vBack_Folder);						    // 백업 폴더 경로 확인
+
+/* -- 2.1. 백업 폴더 생성 -- */
+// option /c : 오류가 생겨도 복사 진행
+EXECUTE cmd.exe /c if not exist $(vBack_Folder) mkdir $(vBack_Folder);
+
+/* -- 2.2. 백업 폴더 내에 "실행일" 하위 폴더 생성 -- */
+EXECUTE cmd.exe /c if not exist $(vBack_Folder)$(vToday) mkdir $(vBack_Folder)$(vToday);
+
+/* -- 3. 데이터 파일(다운로드 > 모델링편 폴더의 예제 데이터)을 "실행일" 폴더에 모두 복사 -- */
+// option /e : 디렉터리 모두 복사 (하위 디렉터리 및 비어있는 경우도 포함)
+// option /y : 기존 파일이 있어도 덮어쓰기
+EXECUTE cmd.exe /c xcopy $(vTarget_Folder) $(vBack_Folder)$(vToday) /e /y ;
+
+/* -- 4. 백업 유지 기간이 "2주"이므로 실행일로부터 14일 이전 날짜 폴더 삭제 -- */
+// option /s : 지정된 디렉터리 자체를 삭제 (모든 디렉터리 트리 삭제)
+// option /q : 삭제 시, 삭제 여부 확인하지 않음
+EXECUTE cmd.exe /c rd /s /q $(vBack_Folder)$(vToday_2wk);
