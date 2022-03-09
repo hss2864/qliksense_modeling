@@ -16,8 +16,7 @@ Load tmpdate as OrderDate,
       'Q' & ceil(month(tmpdate) / 3) as Order_Quarter
 ;     
 // (2) Min ~ Max 사이의 모든 일자의 일련번호 생성
-Load date(mindate + IterNo()) as tmpdate,
-	  maxdate
+Load date(mindate + IterNo()) as tmpdate
 While mindate + IterNo() <= maxdate
 ;
 // (1) 날짜의 시작(Min) & 종료(Max) 일자 추출
