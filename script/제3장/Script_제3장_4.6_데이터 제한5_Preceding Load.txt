@@ -9,6 +9,8 @@ LOAD *,
 FROM [lib://Local/입문편/Sales.xlsx]
 (ooxml, embedded labels, table is Sales);
 
+
+
 /* 아래 스크립트를 실행하려면, 위 스트립트를 주석 처리 후 실행하기
 // 동일 결과를 Resident로 작성
 Sales:

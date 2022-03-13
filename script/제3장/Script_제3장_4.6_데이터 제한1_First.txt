@@ -4,11 +4,3 @@ First 100
 LOAD * 
 FROM [lib://Local/입문편/Sales.xlsx]
 (ooxml, embedded labels, table is Sales);
-
-// 비율(%)로 무작위 로드
-Sales:
-First 100
-LOAD * 
-FROM [lib://Local/입문편/Sales.xlsx]
-(ooxml, embedded labels, table is Sales);
-

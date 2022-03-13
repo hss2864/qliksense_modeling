@@ -1,0 +1,70 @@
+/* 월별/지점별/카테고리별 매출 집계를 정해진 서식에 맞춰 테이블 만들기 */
+
+//---------- 1. 임시 테이블 생성 ----------//
+// 지점명과 카테고리명을 임시 테이블에 붙이기
+Mapping 지점tmp: Load _지점코드, 지점명 Resident 마스터_지점;
+Mapping 메뉴tmp: Load _메뉴코드, 카테고리명 Resident 마스터_메뉴;
+
+판매tmp:
+Load 월, 지점, 카테고리,
+	  sum(수량) as 월수량,
+      sum(월매출) as 월매출,
+      sum(월이익) as 월이익,
+      sum(월이익)/sum(월매출) as 월이익률
+Group by 월, 지점, 카테고리;
+Load Date(MonthStart(기준일자), 'YYYY-MM') as 월,
+      수량,
+      총매출 as 월매출,
+      순이익 as 월이익,
+      ApplyMap('지점tmp', _지점코드) as 지점,
+      ApplyMap('메뉴tmp', _메뉴코드) as 카테고리
+Resident 판매실적;
+
+
+
+//---------- 2. 반복실행 ----------//
+// 반복을 위한 기준값 설정
+Loop_지점: Load Distinct 지점명 as 지점 Resident 마스터_지점;
+Loop_카테고리: Load Distinct 카테고리명 as 카테고리 Resident 마스터_메뉴;
+
+Let v지점 = '1호점';
+Let v카테고리 = '커피';
+
+// 누계합계를 구하기 위해 '연도' 필드 생성
+NoConcatenate
+계산tmp: 
+Load *, Year(월) as 연도
+Resident 판매tmp 
+Where 지점 = '$(v지점)' AND 카테고리='$(v카테고리)';
+
+// (1) 누계합
+누계합:
+Load 월,
+	  if(연도 <> Previous(연도), 월매출, Rangesum(월매출, Peek(누계매출))) as 누계매출,
+      if(연도 <> Previous(연도), 월이익, Rangesum(월이익, Peek(누계이익))) as 누계이익
+Resident 계산tmp;
+
+// (2) 전년대비 누계합 계산을 위한 전년도 값 생성
+Left Join(누계합)
+누계합_전년:
+Load Date(AddYears(월, 1), 'YYYY-MM') as 월, 
+	  누계매출 as 전년_누계매출, 
+      누계이익 as 전년_누계이익
+Resident 누계합
+Where Exists('월', Date(AddYears(월, 1), 'YYYY-MM'))
+Order by 월;
+	
+// (3) 증감액 & 비율(%) 구하기 - 2020년은 이전 연도가 없으므로 IF 조건으로 계산에서 제외
+NoConcatenate
+누계합_증감:
+Load *,
+	 if(Not IsNull(전년_누계매출), RangeSum(누계매출, -전년_누계매출)) as 누계매출증감액,
+     if(Not IsNull(전년_누계매출), (누계매출/전년_누계매출)-1) 			as 누계매출증감비,
+     if(Not IsNull(전년_누계매출), RangeSum(누계이익, -전년_누계이익)) as 누계이익증감액,
+     if(Not IsNull(전년_누계매출), (누계이익/전년_누계이익)-1) 			as 누계이익증감비
+Resident 누계합;
+Drop Table 누계합;
+Drop Fields 전년_누계매출, 전년_누계이익 From 누계합_증감;
+	
+// 테스트 결과 확인 위해 임시로 제거
+drop tables 판매tmp, 계산tmp, Loop_지점, Loop_카테고리;

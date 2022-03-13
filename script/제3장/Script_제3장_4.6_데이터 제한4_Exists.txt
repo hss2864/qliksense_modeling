@@ -23,6 +23,7 @@ Where Exists(ItemNo);
 // Where not Exists(ItemNo);
 
 
+
 /* 아래 스크립트를 실행하려면, 위 스트립트를 주석 처리 후 실행하기
 Sales:
 LOAD *

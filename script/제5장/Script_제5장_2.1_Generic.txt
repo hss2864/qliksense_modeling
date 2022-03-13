@@ -4,7 +4,8 @@ LOAD *, Date(MonthStart(OrderDate), 'YYYY. M.') as  Date_YM
 FROM [lib://Local/입문편/Sales.xlsx]
 (ooxml, embedded labels, table is Sales);
 
-/***** Noconcatenate vs Generic *****/
+/***** Noconcatenate vs Generic  *****/
+/* 차례대로 주석 처리 후 실행 비교 */
 // NoConcatenate
 Generic
 Aggr_Sales:

@@ -4,7 +4,7 @@ LOAD
 FROM [lib://Local/모델링편/example_Join.xlsx]
 (ooxml, embedded labels, table is A);
 
-Join (A)
+Left Join (A)
 LOAD
     지역, 값2
 FROM [lib://Local/모델링편/example_Join.xlsx]
