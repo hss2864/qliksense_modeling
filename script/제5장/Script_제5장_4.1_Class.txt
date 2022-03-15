@@ -1,9 +1,0 @@
-LOAD
-    이름,
-    성별,
-    나이,
-    Class(나이, 10) as 연령대,
-    Class(나이, 10, '나이') as 연령대2,
-    Class(나이, 10, '나이', 5) as 연령대3
-FROM [lib://Local/모델링편/example_Class.xlsx]
-(ooxml, embedded labels, table is Customer);

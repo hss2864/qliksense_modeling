@@ -1,6 +1,0 @@
-// 1~100번째 레코드(행) 로드
-Sales:
-First 100
-LOAD * 
-FROM [lib://Local/입문편/Sales.xlsx]
-(ooxml, embedded labels, table is Sales);

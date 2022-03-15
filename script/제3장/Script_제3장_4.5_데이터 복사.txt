@@ -1,9 +1,0 @@
-Sales:
-LOAD * FROM [lib://Local/입문편/Sales.xlsx]
-(ooxml, embedded labels, table is Sales);
-
-// Copy & Calcuate
-New_Table:
-Load OrderID, Revenue/Quantity as Revenue_AVG 
-Resident Sales;
-
