@@ -1,0 +1,13 @@
+Sales:
+LOAD *
+FROM [lib://Local/입문편/Sales.xlsx]
+(ooxml, embedded labels, table is Sales);
+
+Let vTime = Now();
+Trace -- 데이터 로드 후 시간 확인: $(vTime) ;
+
+// 대기시간 5초
+Sleep 5000 ;
+
+Let vTime = Now();
+Trace -- 대기 시간 후 시간 확인: $(vTime) ;

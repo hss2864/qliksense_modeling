@@ -1,0 +1,12 @@
+LOAD
+    OrderDate,
+    TransactionID,
+    Product,
+    Price
+FROM [lib://Local/모델링편/example_Master Calendar.xlsx]
+(ooxml, embedded labels, table is Product);
+
+Check:
+Load RecNo() as No,
+	  FieldValue('OrderDate', recno())+0 as date
+AutoGenerate FieldValueCount('OrderDate');

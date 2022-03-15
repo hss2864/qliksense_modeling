@@ -1,0 +1,24 @@
+Sales:
+LOAD
+    OrderID,
+    OrderDate,
+    Gender,
+    AgeGroup,
+    Channel,
+    ShipDate,
+    ItemCode,
+    MapCode,
+    Quantity,
+    Revenue,
+    Cost
+FROM [lib://Local/입문편/Sales.xlsx]
+(ooxml, embedded labels, table is Sales);
+
+
+Store Sales into [lib://Local/입문편/저장_Sales.csv](txt);  // CSV
+Store Sales into [lib://Local/입문편/저장_Sales.txt](txt);  // TXT
+Store Sales into [lib://Local/입문편/저장_Sales.qvd](qvd);  // QVD
+
+// 일부 필드만 선택해서 CSV로 저장
+Store OrderDate, Revenue from Sales into [lib://Local/입문편/저장_Sales2.csv](txt);
+

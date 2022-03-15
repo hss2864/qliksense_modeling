@@ -1,0 +1,20 @@
+// Inline 절로 생성한 테이블 Mapping 선언
+Mapping 
+Code:
+Load * Inline
+[Item_initial, Category_Code
+A, C001
+B, C002
+C, C003
+D, C004
+];
+
+ITEM:
+LOAD
+    ItemNo,
+    Category,
+    "Item Type",
+	 // ApplyMap('테이블명', 비교할 값, '그 외 기본 값')
+	 ApplyMap('Code', left(ItemNo, 1)) as Category_Code
+FROM [lib://Local/모델링편/example_Inline Load.xlsx]
+(ooxml, embedded labels, table is Item);

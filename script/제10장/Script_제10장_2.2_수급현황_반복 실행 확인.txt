@@ -1,0 +1,34 @@
+/* 일일 트레픽 제한횟수 = 10,000번 */
+
+Trace |===== 국민연금 수급현황 데이터 호출 =====|;
+
+// 요청 변수 설정 -(고정) 서울특별시, 80세, 전체
+Let vKey2 = '발급받은 서비스키 입력하기';
+Let v시도코드 = '11'; // 서울특별시
+Let v연령= 80;		// 80세
+Let v급여종별= '00'; // 전체
+
+//---------- 1. item 테이블 (데이터) 가져오기 (시군구, 읍면동, 성별에 따른 수급현황) "반복 실행"
+NoConcatenate 시군구tmp: Load Distinct * Resident Loop_시군구 Where 시도코드=$(v시도코드);
+for v시군구 = 0 to NoOfRows('시군구tmp')-1
+  Let v시군구코드 = Peek('시군구코드', $(v시군구), '시군구tmp'); Trace 시군구코드: $(v시군구코드);
+  Let v시군구명 = Peek('시군구명', $(v시군구), '시군구tmp'); Trace 시군구명 $(v시군구명);
+  
+  NoConcatenate 읍면동tmp: Load Distinct * Resident Loop_읍면동 Where 시군구코드=$(v시군구코드);
+  for v읍면동 = 0 to NoOfRows('읍면동tmp')-1
+    Let v읍면동코드 = Peek('읍면동코드', $(v읍면동), '읍면동tmp'); Trace 읍면동코드: $(v읍면동코드);
+    Let v읍면동명 = Peek('읍면동명', $(v읍면동), '읍면동tmp'); Trace 읍면동명 $(v읍면동명);
+    
+    for v성별 = 0 to NoOfRows('Loop_성별')-1
+      Let v성별코드 = Peek('성별구분코드', $(v성별), 'Loop_성별');
+      
+      // 반복 실행 테스트
+      TRACE $(v성별코드);
+      	  
+    Next v성별;
+    
+  Next v읍면동;
+  Drop Table 읍면동tmp;
+  
+Next v시군구;
+Drop Table 시군구tmp;

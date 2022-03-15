@@ -1,0 +1,16 @@
+//---------- 2. 반복 실행 ----------//
+// 반복을 위한 기준값 설정
+Loop_지점: Load Distinct 지점명 as 지점 Resident 마스터_지점;
+Loop_카테고리: Load Distinct 카테고리명 as 카테고리 Resident 마스터_메뉴;
+
+For i = 0 to NoOfRows('Loop_지점')-1
+  Let v지점 = Peek('지점', $(i), 'Loop_지점');  TRACE -- 지점 : $(v지점) 계산 시작;
+
+  For j = 0 to NoOfRows('Loop_카테고리')-1
+    Let v카테고리 = Peek('카테고리', $(j), 'Loop_카테고리');  TRACE -- 카테고리 : $(v카테고리);
+	
+    /* 반복을 통해 특정 서식에 맞는 집계 항목 산출 */
+	
+  Next j	// 카테고리별 반복 실행 종료
+  
+Next i	// 지점별 반복 실행 종료

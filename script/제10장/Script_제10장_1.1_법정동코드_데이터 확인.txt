@@ -1,0 +1,34 @@
+// 연결문
+LIB CONNECT TO 'API_법정동코드';
+
+RestConnectorMasterTable:
+SQL SELECT 
+	"__KEY_StanReginCd",
+	(SELECT 
+		"totalCount",
+		"numOfRows",
+		"pageNo",
+		"type",
+		"__KEY_head",
+		"__FK_head",
+		(SELECT 
+			"resultCode",
+			"resultMsg",
+			"__FK_RESULT"
+		FROM "RESULT" FK "__FK_RESULT")
+	FROM "head" PK "__KEY_head" FK "__FK_head"),
+	(SELECT 
+	FROM "row")
+FROM XML "StanReginCd" PK "__KEY_StanReginCd";
+
+[head]:
+LOAD	[totalCount],
+	[numOfRows],
+	[pageNo],
+	[type],
+	[__KEY_head],
+	[__FK_head] AS [__KEY_StanReginCd]
+RESIDENT RestConnectorMasterTable
+WHERE NOT IsNull([__FK_head]);
+
+DROP TABLE RestConnectorMasterTable;

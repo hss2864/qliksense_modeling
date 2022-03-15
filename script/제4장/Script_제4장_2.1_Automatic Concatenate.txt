@@ -1,0 +1,15 @@
+// Automatic Concatenation
+Sales:
+LOAD
+    OrderID,
+    OrderDate,
+    Revenue
+FROM [lib://Local/모델링편/example_Concatenate.xlsx]
+(ooxml, embedded labels, table is [Sales 2019]);
+
+LOAD
+    OrderID,
+    OrderDate,
+    Revenue
+FROM [lib://Local/모델링편/example_Concatenate.xlsx]
+(ooxml, embedded labels, table is [Sales 2020]);

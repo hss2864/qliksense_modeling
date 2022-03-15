@@ -1,0 +1,28 @@
+판매실적:
+LOAD
+	Date(Date#(floor(기준일), 'YYYYMMDD')) as 기준일자,
+    지점 as _지점코드,
+    메뉴 as _메뉴코드,
+    수량,
+    총매출,
+    순이익
+FROM [lib://Local/source/판매.qvd]
+(qvd);
+
+마스터_지점:
+LOAD
+    지점코드 as _지점코드, 
+    지점명,
+    직원수
+FROM [lib://Local/source/지점.qvd]
+(qvd);
+
+마스터_메뉴:
+LOAD
+    카테고리코드 as _카테고리코드,
+    카테고리명,
+    메뉴코드 as _메뉴코드,
+    메뉴명,
+    판매가
+FROM [lib://Local/source/메뉴.qvd]
+(qvd);
