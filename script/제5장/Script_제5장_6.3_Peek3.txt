@@ -1,0 +1,17 @@
+/*
+ID의 현재 행 값이 이전 행 값과 동일하면, 
+Peek('List')값과 Value의 현재 값을 연결
+*/
+PeekTable3:
+LOAD *,
+      IF(ID=Peek('ID'), Peek('List') & ',' & Value, Value) as List
+FROM [lib://Local/모델링편/example_Peek.xlsx]
+(ooxml, embedded labels, table is Peek3);
+
+// ID별 마지막 값만 추출
+Peek_List:
+Load ID, LastValue(List) as List
+Resident PeekTable3
+Group by ID;
+
+Drop Field List From PeekTable3;

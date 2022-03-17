@@ -1,0 +1,24 @@
+// 구조 변경: Wide Form → Long Form
+경쟁사tmp:
+CrossTable(월, 총매출액, 2)
+LOAD *
+FROM [lib://Local/source/경쟁사.qvd]
+(qvd)
+Where 1=1;
+
+// 데이터 가공
+NoConcatenate
+경쟁사비교:
+Load Date(Date#(기준 & SubField(월, '월', 1), 'YYYYM'), 'YYYY-MM') as 기준년월, 
+      경쟁사 as 회사명, 
+	  총매출액
+Resident 경쟁사tmp;
+Drop Table 경쟁사tmp;
+
+// 판매실적의 월별 집계 추가
+Concatenate(경쟁사비교)
+Load Date(MonthStart(기준일자), 'YYYY-MM') as 기준년월,
+	  '본사' as 회사명,
+      sum(총매출) as 총매출액
+Resident 판매실적
+Group by Date(MonthStart(기준일자), 'YYYY-MM');

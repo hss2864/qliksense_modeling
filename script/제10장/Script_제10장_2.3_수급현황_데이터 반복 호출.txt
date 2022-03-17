@@ -1,0 +1,86 @@
+/* 일일 트레픽 제한횟수 = 10,000번 */
+
+Trace |===== 국민연금 수급현황 데이터 호출 =====|;
+
+// 요청 변수 설정 -(고정) 서울특별시, 80세, 전체
+Let vKey2 = '발급받은 서비스키 입력하기';
+Let v시도코드 = '11'; // 서울특별시
+Let v연령= 80;		// 80세
+Let v급여종별= '00'; // 전체
+
+
+LIB CONNECT TO 'API_국민연금 수급현황';	// REST 연결문
+
+//---------- 1. item 테이블 (데이터) 가져오기 (시군구, 읍면동, 성별에 따른 수급현황) "반복 실행"
+NoConcatenate 시군구tmp: Load Distinct * Resident Loop_시군구 Where 시도코드=$(v시도코드);
+for v시군구 = 0 to NoOfRows('시군구tmp')-1
+  Let v시군구코드 = Peek('시군구코드', $(v시군구), '시군구tmp'); Trace 시군구코드: $(v시군구코드);
+  Let v시군구명 = Peek('시군구명', $(v시군구), '시군구tmp'); Trace 시군구명 $(v시군구명);
+  
+  NoConcatenate 읍면동tmp: Load Distinct * Resident Loop_읍면동 Where 시군구코드=$(v시군구코드);
+  for v읍면동 = 0 to NoOfRows('읍면동tmp')-1
+    Let v읍면동코드 = Peek('읍면동코드', $(v읍면동), '읍면동tmp'); Trace 읍면동코드: $(v읍면동코드);
+    Let v읍면동명 = Peek('읍면동명', $(v읍면동), '읍면동tmp'); Trace 읍면동명 $(v읍면동명);
+    
+    for v성별 = 0 to NoOfRows('Loop_성별')-1
+      Let v성별코드 = Peek('성별구분코드', $(v성별), 'Loop_성별');
+      
+      RestConnectorMasterTable:
+      SQL SELECT 
+          "__KEY_response",
+          (SELECT 
+          FROM "header"),
+          (SELECT 
+              (SELECT 
+                  "avgFnlPrvsAmt",
+                  "avgPrvsPrdMcnt",
+                  "avgTotPrvsAmt",
+                  "totPrsnCnt",
+                  "whlPymtCtstPrvsRate",
+                  "__FK_item"
+              FROM "item" FK "__FK_item")
+          FROM "body" PK "__KEY_body" FK "__FK_body")
+      FROM XML "response" PK "__KEY_response"
+      WITH CONNECTION(Url "http://apis.data.go.kr/B552015/NpsReciptInfoProvdService/getReciptSttusInfoSearch?ldong_addr_mgpl_dg_cd=$(v시도코드)&ldong_addr_mgpl_sggu_cd=$(v시군구코드)&ldong_addr_mgpl_sggu_emd_cd=$(v읍면동코드)&crtr_age=$(v연령)&sex_dvcd=$(v성별코드)&pay_clss_cd=$(v급여종별)&serviceKey=$(vKey2)");
+      /* 자동으로 생성되는 마지막의 FROM XML문 다음으로 "WITH CONNECTION" 문 추가 -> 기존 URL에서 요청 값을 변수로 처리 */
+	  
+      [item]:
+      LOAD	
+      		'$(v시도코드)' as 시도코드,
+            '$(v시군구코드)' as 시군구코드,
+            '$(v읍면동코드)' as 읍면동코드,
+            '$(v성별코드)' as 성별구분코드,
+            '$(v연령)' as 기준연령,
+            '$(v급여종별)' as 급여종별코드,
+      		[avgFnlPrvsAmt] as 평균연금수급액_월,
+            [avgPrvsPrdMcnt] as 평균수급기간_월,
+            [avgTotPrvsAmt] as 평균누적연금수급액,
+            [totPrsnCnt] as 총인원수,
+            [whlPymtCtstPrvsRate] as 평균납부액대비수급액기준,
+            [__FK_item] AS [__KEY_body]
+      RESIDENT RestConnectorMasterTable
+      WHERE NOT IsNull([__FK_item]);
+
+      DROP TABLE RestConnectorMasterTable;
+    Next v성별;
+    
+  Next v읍면동;
+  Drop Table 읍면동tmp;
+  
+Next v시군구;
+Drop Table 시군구tmp;
+
+
+
+//---------- 3. 데이터 QVD로 저장하기
+Store item into 'lib://Local/API/국민연금수급현황_서울특별시.qvd'(qvd); // QVD 생성
+Drop Table item;
+
+/* 요청항목 코드기준 QVD 생성 */
+For k = NoOfTables()-1 to 0 step -1	 // drop table 과정에서 오류가 있어서 역으로 반복 진행
+  Let vTableName = TableName($(k));  trace TableName($(k)): $(vTableName);
+  Store [$(vTableName)] into 'lib://Local/API/$(vTableName).qvd'(qvd); // QVD 생성
+  Drop table $(vTableName);
+Next k;
+
+DisConnect; // 연결 종료

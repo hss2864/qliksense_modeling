@@ -1,0 +1,30 @@
+// AutoNumber 함수로 복합 키 생성
+// 연결 키는 Key 필드임을 구분하기 위해 Naming을 다르게 생성
+A:
+LOAD
+    Sector,
+    Code,
+    AutoNumber(Sector & '-' & Left(Code, 1)) as %Key,
+    Sector & '-' & Left(Code, 1) as %Key_org,
+    Status,
+    Notes,
+    Cause,
+    "Check Date"
+FROM [lib://Local/모델링편/example_AutoNumber.xlsx]
+(ooxml, embedded labels, table is A);
+
+Unit_QV:
+LOAD
+//     Sector, Code,
+    AutoNumber(Sector & '-' & Code) as %Key,
+    Unit as Unit_QV
+FROM [lib://Local/모델링편/example_AutoNumber.xlsx]
+(ooxml, embedded labels, table is B);
+
+Unit_QS:
+LOAD
+//     Sector, Code,
+    AutoNumber(Sector & '-' & Code) as %Key,
+    Unit as Unit_QS
+FROM [lib://Local/모델링편/example_AutoNumber.xlsx]
+(ooxml, embedded labels, table is C);

@@ -1,0 +1,37 @@
+/* 특정 경로 내 존재하는 파일정보 생성*/
+
+// 서브루틴 시작. 파라미터는 "Directory"
+Sub ListUp (Directory)
+	 
+    // For each 선언 "SubDir" : 경로 내 각 폴더별 반복 실행
+    // dirlist = 쉼표를 구분으로 한 '폴더' 목록 생성
+    For each SubDir in dirlist(Directory & '\*')
+      
+      // For each 선언 "File" : 각 파일별 반복 실행
+      // filelist = 쉼표를 구분으로 한 '파일' 목록 생성
+      For each File in filelist (SubDir & '\*')
+        
+        Files:
+        LOAD 
+          // 폴더 정보 생성
+          Mid('$(SubDir)', 1, Index('$(SubDir)', '/', 3)) as DirectoryName,
+          Subfield('$(SubDir)', '/', 4) as FolderName,
+          // 파일 정보 생성
+          Subfield(Subfield('$(File)', '/', 5), '.', 1) as File_Name, // 파일 이름
+          Subfield('$(File)', '.', 2) as File_Extension,			  // 파일 확장자
+          FileSize('$(File)') as File_Size,							   // 파일 크기
+          FileTime('$(File)') as File_Time							   // 파일 날짜
+        AutoGenerate 1;
+		 
+      // 파일별 반복 실행 종료
+      Next File
+    
+    // 폴더별 반복 실행 종료
+    Next SubDir
+
+// 서브루틴 종료
+End Sub
+
+
+// 서브루틴 호출 (파라미터에 경로 입력)
+call ListUp ('lib://Local')

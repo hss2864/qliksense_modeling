@@ -1,0 +1,19 @@
+시험점수:
+LOAD
+    수강생, 구분, 점수
+FROM [lib://Local/모델링편/example_IntervalMatch1_Score.xlsx]
+(ooxml, embedded labels, table is Score);
+
+등급:
+LOAD
+    등급, 하한, 상한
+FROM [lib://Local/모델링편/example_IntervalMatch1_Score.xlsx]
+(ooxml, embedded labels, table is Grade);
+
+// 1) 시험점수 테이블의 "점수" 필드를 기준으로 설정
+// 2) 등급 테이블의 "하한", "상한" 필드를 "점수" 기준에 맞춰 Match
+// 3) IntervalMatch 결과 테이블을 등급 테이블에 Inner Join
+Inner Join (등급)
+IntervalMatch(점수)
+Load 하한, 상한
+Resident 등급;

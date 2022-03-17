@@ -1,0 +1,20 @@
+// 데이터 로드 시, 연월 필드 생성
+Sales:
+LOAD *, Date(MonthStart(OrderDate), 'YYYY. M.') as  Date_YM
+FROM [lib://Local/입문편/Sales.xlsx]
+(ooxml, embedded labels, table is Sales);
+
+/***** Noconcatenate vs Generic  *****/
+/* 차례대로 주석 처리 후 실행 비교 */
+// NoConcatenate
+Generic
+Aggr_Sales:
+LOAD Date_YM,
+      Gender, 
+      AgeGroup,
+    Sum(Revenue) as Sum_Revenue
+Resident Sales
+Group by Date_YM, Gender, AgeGroup
+Order by Date_YM desc, Gender, AgeGroup asc ;  
+
+Drop Table Sales;

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <QvdTableHeader>
+   <QvBuildNo>50652</QvBuildNo>
+   <CreatorDoc>C:\Users\hong\Documents\Qlik\Sense\Apps\_Development.qvf</CreatorDoc>
+   <CreateUtcTime>2022-03-11 10:34:36</CreateUtcTime>
+   <SourceCreateUtcTime></SourceCreateUtcTime>
+   <SourceFileUtcTime></SourceFileUtcTime>
+   <SourceFileSize>-1</SourceFileSize>
+   <StaleUtcTime></StaleUtcTime>
+   <TableName>Trend_Monthly</TableName>
+   <Fields>
+     <QvdFieldHeader>
+       <FieldName>ì—°ë„</FieldName>
+       <BitOffset>87</BitOffset>
+       <BitWidth>1</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>2</NoOfSymbols>
+       <Offset>0</Offset>
+       <Length>10</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì›”</FieldName>
+       <BitOffset>80</BitOffset>
+       <BitWidth>5</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>DATE</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>YYYY-MM</Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>24</NoOfSymbols>
+       <Offset>10</Offset>
+       <Length>312</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+         <String>$timestamp</String>
+         <String>$date</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì§€ì </FieldName>
+       <BitOffset>40</BitOffset>
+       <BitWidth>2</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>3</NoOfSymbols>
+       <Offset>322</Offset>
+       <Length>27</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì¹´í…Œê³ ë¦¬</FieldName>
+       <BitOffset>85</BitOffset>
+       <BitWidth>2</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>3</NoOfSymbols>
+       <Offset>349</Offset>
+       <Length>24</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$text</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì›”ìˆ˜ëŸ‰</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>214</NoOfSymbols>
+       <Offset>373</Offset>
+       <Length>1070</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì›”ë§¤ì¶œ</FieldName>
+       <BitOffset>8</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>215</NoOfSymbols>
+       <Offset>1443</Offset>
+       <Length>1075</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì›”ì´ìµ</FieldName>
+       <BitOffset>16</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>216</NoOfSymbols>
+       <Offset>2518</Offset>
+       <Length>1080</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ì›”ì´ìµë¥ </FieldName>
+       <BitOffset>24</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>REAL</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt>##############</Fmt>
+         <Dec>.</Dec>
+         <Thou>,</Thou>
+       </NumberFormat>
+       <NoOfSymbols>216</NoOfSymbols>
+       <Offset>3598</Offset>
+       <Length>1944</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ë§¤ì¶œ</FieldName>
+       <BitOffset>32</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>215</NoOfSymbols>
+       <Offset>5542</Offset>
+       <Length>1237</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ë§¤ì¶œì¦ê°ì•¡</FieldName>
+       <BitOffset>42</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>-2</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>108</NoOfSymbols>
+       <Offset>6779</Offset>
+       <Length>540</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ë§¤ì¶œì¦ê°ë¹„</FieldName>
+       <BitOffset>49</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>-2</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>108</NoOfSymbols>
+       <Offset>7319</Offset>
+       <Length>972</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ì´ìµ</FieldName>
+       <BitOffset>56</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>216</NoOfSymbols>
+       <Offset>8291</Offset>
+       <Length>1224</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ì´ìµì¦ê°ì•¡</FieldName>
+       <BitOffset>64</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>-2</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>108</NoOfSymbols>
+       <Offset>9515</Offset>
+       <Length>540</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+         <String>$integer</String>
+       </Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>ëˆ„ê³„ì´ìµì¦ê°ë¹„</FieldName>
+       <BitOffset>72</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>-2</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>108</NoOfSymbols>
+       <Offset>10055</Offset>
+       <Length>972</Length>
+       <Comment></Comment>
+       <Tags>
+         <String>$numeric</String>
+       </Tags>
+     </QvdFieldHeader>
+   </Fields>
+   <Compression></Compression>
+   <RecordByteSize>11</RecordByteSize>
+   <NoOfRecords>216</NoOfRecords>
+   <Offset>11027</Offset>
+   <Length>2376</Length>
+   <Lineage></Lineage>
+   <Comment></Comment>
+   <EncryptionInfo></EncryptionInfo>
+   <TableTags></TableTags>
+   <ProfilingData></ProfilingData>
+ </QvdTableHeader>
+ ä  å  7«  2020-01 V«  2020-02 s«  2020-03 ’«  2020-04 °«  2020-05 Ï«  2020-06 í«  2020-07 ¬  2020-08 +¬  2020-09 I¬  2020-10 h¬  2020-11 †¬  2020-12 ¥¬  2021-01 Ä¬  2021-02 à¬  2021-03 ÿ¬  2021-04 ­  2021-05 <­  2021-06 Z­  2021-07 y­  2021-08 ˜­  2021-09 ¶­  2021-10 Õ­  2021-11 ó­  2021-12 1í˜¸ì  2í˜¸ì  3í˜¸ì  ì»¤í”¼ ì—ì´ë“œ í‹° ¬?  T#  ×*  j4  ~+  *  ',  ‚.  ]  ”+  ¨#  þ   ˆ)  2  ?C  hH  ¢2  $  l  À   Þ-  N#  5+  <  N  •  Š  5  2  ó  L
+  é  \  ç  ‚  ,  º  2  ü  H    Æ  ®  M  ½  )    d  a    Ž  Ÿ  ,  ð    v  8  A  R  1  È  !  À$  Í   Þ   Ó  U  Œ  å  r  [  B  À'  Ñ/  61  Ý)  $*  ²%  Y0  -"  ß!  é     £'  œ2  nC  cI  é>  5/  /&  ñ*  Ç+  w5  (3  .  œ  †  ^  ˜	    ”  ¡  Ö  &  Ö  ‚	  «
+  e  »  1  o  û  ú  ]  s  ï  Ç  z  {    ô  #  š  *  §  ´  þ  	  ×  u  †  7  ô   '  ç(  Ç   R  5  µ  à  ù  Ä    à@  ¡.  a+  Û.  Û)  ¿/  ä1  \  +  %%    .  „   4  ý<  hD  ¦3  ‡/  1  ó$  T&  Ý/  =.  1  @  ñ    Ë
+  \	  Ö  ³  q  D  .  ø
+  ì
+  Ï  4    Ê  1  ¸  e    i  †  t  ¹  Ó  à  ©  ¬  Ï      £  E      ö  6  ê  ¦#  ­!  g#  ¢  s  =  €!  ¶  Š  `‘~¬å8DÈÆÍ¸¨[P=4õˆ Â‹àå°0°cÀÜã|ËX
+_È§Î@Wçø5hš×ôŒ^4–¢ ¿·éÔd’Àªüüie ‚ÐE{ ¸#ö pH« ¸
+Ä 0Žá o
+ Ø˜ ˜Ê°  ¨ è$„ °Y×  ð ðÐ$0vI TFÀ†àX«Ð^­ ø.<x­B˜@+(ät˜8° ÔF£ ø‚˜ ¨à ÀBÀ „8í €$« l·š äö¡ 7– Œ Ðæ=Ëé ¼ím„x‰¨haÌh`€XIïÙ lÍ=Z0ü¼'L	'ÄŠ­¨Ô0”c¤t²´_XdÒNl{¬O˜Ý˜nã8š‹VÑX72ø*ÕpÃÃpð,žxÆ¹„"#^ö‚`ùø3édš ë1å¹ Pä @hŽ ˆìv àö Øýç 8Ü Üà `Í °! HZž 8[ó È·3X'À¨¿ÃÈEFðæcx=+ô ¨“Eèáðò/È‰\XU”Ô› HÒÕ  «¬ L“  •† ¤¬½ ˆf„ {‹ 0Ý¿ ˜xÆ ä~µ  ÆVÄued|¥M¶ÈÈ^˜,&EË TÞ x1ÔÞZøåCxiú ïhDÄŸt–R¹•D§DC¯¬=Í<S”þVpå”B¾4×¬Ä3»XÒõ0¯r|ãüŽùüñª[Ç$ÊXÝ'ˆ9¾´/’Ø›± ¾XÉÝ ¨ÖÁ H5   íŠ ë i$X…Ç `™â ÐÊ´ @Ñ¢  ¢ ¨ÐÛ àvÑ®pÎ~X@cB8ƒä ¸ßß ˜Fà™/¬¯\ØÔ§ ¨Y¨ Ù ô4³ ¨*› ltº àc‰ @ç¯ ”æ˜ ˆÃ³ x!‰ ²À <3(6_ì7ŠTp„ƒ¢Lˆý ¨v5pqh¤7àê.ñõi ü; ¹£b f¥ Ì• 1Kj Ð¹† ¤/’ ©ø| &rm £Il  Ž} ¼áJ  
+b æSß ·§ú HB© ›­ B#t Eö õý« )Ð .”{ ‹É· ê% bü n,/ öh) ü¸, 
+?0 âÅ< @4& \o? * @V +: 6Û   ø( 6eQ ä¡K æc Ú\H ¦a>  Ž% 
+T ¬<a ŽœC ,dd gA ©{ § /½ 9a= µk  5Þ2 , Õ$ ‚® «ü% p½' + ¥ >öC #¤V IW ö
+m ý|X ÝªE Ogg yn^ ÐüF m^ =Öm 7ŽM à¦} Ú˜ž K]Ÿ ½“k !\t åW¥ Gš ¼` ©”W MÏ‹ PFI #"e ŸÓ rË‹à 5Å i‚ «ó¨ GÂº Ã[Ó ÆhÉ ÷Æ T	+ €å ¾)  ‰  &û Z?3 hÆ% &q7 ¶îG æé( @k" 4E, â} ´) <tW  Uw &ôF fm vòE èE  Fl ð=  ÜA Àik ú_ è¯ {v" oæ" Ák( ÎD «O( ]¥% .u* ÝÂ# †Ü$ }M& G- 9* ºT 'p AûJ ì¢W ÏÈ5 ÂA3 ÈðU Ås] ‹M ©âF ‡PY >^ ¯„} -’ l: ± «¡ õˆ_ *° î×e ÆÁZ ë›m r‹4 ë®g Ñ· êüä ¹ žÄ X†À ÊnŒ n¢¦ ÓSº h6Ÿ x Å ¶È! ^O úN j# " ˜9& šXI ¦¾' „< º—! z€" Hç) Ø° "Ó: |ª[ ¦¡_ ¸OD ŽxZ ‚; ÂlC ¸\ x= ¨’9 ¬ØV Š¡) )Â Rƒ  îj. pU+ ê ) Ír î÷- ›™ ”w! i) ÷2 ›ß% ÅK ¶c èF] ßrq 3ãH  @ °î[ :“x ÅEE Ýíf .Ë/­R¾?Ì`ê+¿?¯ÆžÄÅ?KbxPƒÍ?6LŸ°TÃÏ?ß©I¾Ç?ÞîúE¿’Ê?ÓZ¢Ô³µÌ?BBoÒyÒ?™!ßÜýæÆ?4¢m¥Ì?hn8ôÑ?Î"Æí9”¿?s’±<vÁ?TÛÝ~ÔšÌ?¡™»·¹Î?1ð’ªÆÍ?ûÜ^BBÒ?Ô ñÆÁÑ?©Ái*êÒ?).•µ€y×?ZÈ7äU>Ô?Š~QÞÏ?šÇQ4ß,Ó?†’»í»?Ùÿïòó¬Â?Í¯ÕØˆÈ?JvbþòÎ?F¨ØuJ3Í?½=AaË?B&C$P2Í?Äñû‚þÏ?tÙU¦ÉöÖ?6ðž¸Æ?ì/¹o±bÍ?&-}IÑ?v-_d…Á?ÈÜ;;ªèÁ?4N¯³„ŸÏ?CkŠƒªÍ?·Ô‚'ó>Ð?Hï4BÑ?’°oÚL§Ì?—ä]ŒºË?Ø^q<ÁÑ?¯S²Ó8IÓ?ôeGoëÌ?
+¼õ˜÷:Ñ?3œdpw.¹?VÄ2kYÁ?Èwíúø>Ç?t’˜˜õÈ?âAˆ¹4‰Ñ?ÕçO¢•Å?fTØ§‹rË?@`×È¿{Ð?‡7m¢áxÎ?1ËÚµ	É? «·?/Ð?¦ÈÀá6)Ò?¿	š¶RÁ?Á[¬¯¿ã¿?4KÑÅÇ?CÏ0ök/Ì?ŠÄ—Ï?‡6$?ÍÓ?_._é2Ñ?®ß–b„uÔ?ŽÙùÞÒÔ?£‰ÅÑzÛÓ?èý;x¹Î?²¢óIŒdÔ?!,ñ0Ý½?úþãob³Á?ô÷€‹È?‰-@2ÈfÍ?	9@d ýÐ?°8 xiNÇ?Ëþ.£óÌ?À&ì€ÅÛÏ?—}'}ó±Ô?é´›ßœÉ?'-]VÌ?·iõˆ:Ó?éhå‰¶®À?uÁðéãÙÁ?Ï”[“ Ì?‰éíÏ?G;üÑùÎ?KR}Ò?bGÓAf‹Î?¸ÇÃÌÖÑ?÷$ØL—Ò?‰ç5CœÆÑ?YÌ2LÑ?RØZôÓ?]±ž)ÁÂ?Ùäˆ¿?$?¹ SÇ?Œ®}Xy>Í?ŒþˆÓÎ?ñRÆ7¨Ê?Å[p—×Ä?ˆ'ïûÅÐ?Ìe\x;yÔ?ûøÉÉ?Žƒ5h7Ï?7yÜpäÑ?Ú ˆf¸	À?"lš¿IÁ?´°äÜqúÈ?__;mèÐ?wLJ,úÕË?ó€…d­Ó?÷˜`Õ;Ì?~ŒãÛåÒ?I¯TÄHÕ?–wÜOÕ£Í?3ó1¼Ë?ä0™?¹Ó?jnöµŠ»?1òtÐ³¾?õQ·g¡Ä?ZÑw
+$ßÉ?²&ßz–Ñ?þŽÕæ~:Ä?A[Çì!4Ë?Hþo±†2Ò?œ˜]E{Ó?Žòd‘ÛÇ? #²KæÅÇ?7•TË?†^è…^èÀ?úâm+¾?ˆí¥p»É?èª]h`Ð?O­nH\Ë?AD[æÓ?b,Þ#ïÐ?£]s¼‡‚Í?„“PÒ?Ú)—û>Ñ?Ru ¥Î?ù÷´çæÒ?,	O
+W1º?VKæõÁ?ç§Ü^Ë?tÆ™™FÌ?žËÇ¹í!Ï?§E«EÊ?D}ãEÚÌ?êÐ‚ñéÆÎ?·Ø$¨–ÒÒ?¿#`×ÕÈ?öQõRÊ?¢v¦[Ð?|¹É¿Y¾?Ì€y<ƒÁ?:vlÏŠÊ?Ût“#uÍ?îSeF"Ï?¼ÁÓ’;^Ò?ˆv?RÑ?Ât
+OÞÐ?]tU?SÓ?ƒ)jjOûÐ?$;ª5qöÎ?sž³rHÒ?Ž«þ}D¾?ä6a/nêÀ?ÙÃy—Ä?}ïœ­jÌ?¦i$REWÉ?luüŽÐÄ?„e,¥Ð? ŠiÉ?¯ç®IúÐ?›ºz=ÈÇ?È>¨?¶Ë?Æ:“ÂŠÐ?m›É¸?K^m Ä?H­mv!<Ë?œÛîþùÏ?YÁdòË0Ð?A?%àÍõÑ?J&0ÁEŠÐ?&–‡AlFÓ? »0uÕ?M¼æ™“?Î?›ŒðÍ?áJq¶NÒ?ñ³ w™¾?¢BÒÕæ©¿?ŠOb¸È?ÚýO§¾]Ë?Ë ÑÄ”óÎ?Tc¿c¬É?r†ª£q.Ì?SÍëG
+¤È?DÞb_™¹Ð?™¥>ïÇ?jwcÔÇ?ô”ÈÞŸ$Ó?)°¼Ò¾?Æ‡ž‹’¿?p&ú_Ë?×n¾œ‘'Ð?¿ÊœÙš7Ð?üPÕ”mÁÒ?&Ößá½Ð?a;1è(Ð?ýçô“2Ó?µãgÄÂhÕ?(«U±XÐ?‹%Äò)¿Õ?`‘~58626400 •cD¨§ou
+ÄÑH—HÖ"(¼ÓXl7I”ZæX
+_39783000  ²-`		X?)ÀÙ ´f_èüè»¹ì¤ŽPÀ kÕ‚ ‚18711200 pÈ˜(ìŽ˜4:P?þ€Íßˆ<ê¨ƒ@ß3à|ÜÈ¡`xû7	 ð 15732000 Þ@T^à¨¤ Å*€7ÉM`(ûXW7
+ÐzhE¥)˜18159000 Ð'Å¤nhœñ Dõà8¡ˆpŽ•9tLÔXCvlzü…˜Ðæ=20834000 `²' • H€êà”B*	˜1
+ÿAYrš\ÁÄŠ­61704900 l_Þ Ãk¤7X—v¼iÅ(åÇÔ4`äO=|¾ ´X¬D¯}X7236845400 PbÀ%Ë0ø8–°ÝO4]rL€ÐXvS¸oLÐ¢5 4$Ð" ë120048800 °Ðë ìÏÈ@Õ¨UË€S³Œ hp°È=`êÊ¨Di	8[ó 15948600  'X:ç úªÈ?ñ¸&U0C’	8n†
+àÌÈãÓ¸Ö€``XU18503000 ì)¶4ü‹T§8 ½ËÀRRdÿìe”ôà$¾ß¼6¦ µ[ ÆV22464000 Ä;¼(¸a<Îvœúœ¸?h	¼“F
+4­wŒÒ rxÛïh57208600 \³ÐI[`ñ
+¤ª5´íä`+²œ~?0}– b£4¥ah|Ä3»29045700 ±Lµ#È¶ÄE À7«È’rì\‡D:¯Ìsm€£ÿX?±  ¾18726400 X‡û ^½H“]è€èx‘Ó€ú÷Ø¿8¢äVHµùhÔ›	¨ÐÛ 14405800 ˆìQ˜½ Œ`“ öÏØy´Y”	( ¥
+8½©ðàŸÐzÏ¬¯\22851500 „„,Þ¬@ú…4/9ÜYÔHÎŽ(2hÈüÿ`„Ãüä²À 12628500 PÉóxÿRd7Ý¸SM<sÐPçœä	D´…‚X½‘8¨ÀøxàþÊÿamLÐ³üÁ/ GQ èj å–ÄèºøSéø!xzœ€ŠÒÿ | hÏ HtjP†, QWc¸xxð‡ £D.â8Ñ( Šb x1-'ŒŸ²?Ò›œÊ²m¼ü¤›`™(”¬„þä)ÿÀb_ ŒÞÙàôsŠxªxKpt&<±+J‰ðtR˜oÁÿPB; XNÀ¥L ÿÑ‰°ïÞ(âöÀ™[–Xì8Ø÷¨p< Øô»Õè]ßd«Ü§JT@XÐ-²@ÌWäÍòD;pØ%µ¬DRþÀR¨þ|kÈÿh³ ›ÊJÆhgÀPÞG½,ÊLþðÂ¢¨¾ÿ0eV ˜_CÀø!x¥(eüX¼¸ÙÔð†0ÙR¨+¦h¦3hdÿÌDïÿL!¦ $=W„$`üGXtkÌÜúQ¸…!Ôù|<Ã"þ³”è’Ô¿„wªÿ£¿ÐY<ÝÇ?È–÷h‰Ð?¨ð¿çÒÏ?xo™M¢4Ì?à«V¬—Á?P©‡A5´?ÝM®J´?à¶RÖ4´?ðµ§ï±³?@w‹¿õ·?pöqdSaÄ¿´RžLmÓ?¸ó!¡DÔ?DäÇzžÜ?ž“«Ôká?ØˆñK1½Þ?ˆÞ÷ØÙ?x¹ßDØ?Ä?N÷ ÇÚ?ð…ô çnÝ?|F(?¡Mà?—Cþ£óà?È_ÉÛÂ?h(ÙÌ–ÕË?´¨XWEß?öšpÜæ?ì#õ¼S¤å?4Z?„tæ?8tð˜dÈä?TªŠ‹}ã?nMÄ*Àä?–*ªa`å?~>ó¶þæ?Žª#Iíæ?š«ä¡½ÈÙ¿ˆÑm*QÂ¿À Z‡§¦?XM” “OÅ?872"±Í?h.BÚ¼Ì?¨ûœþÏcÊ?`¡ú™Å?(G'È$…Ç?P&NƒDnË?49í²JKÐ?Ø9¯ÎÑ?4ß®j-Ê¿àÏÌOvØ¾?à‹«tÔØ?Hg†Øå?Ú±ioaõé?€!2áüç?£Þˆ«ºå?¬ þjVã? Ê«Þ¾â? “µäÎá?ÖÚØë›ã?8®zHä?plÈÁfË?.«2µ#ã?ˆçgç?f”@e	‰ì?f —!‡ìî?¤:|^9Çï?<zÜŠvë?Zt‚œîê?r)ŠB™êë?|6ìsÿ°ë?t‘<þ7ïê?ÜÙÖ2®é?j½²T–ß¿ÐdªcyzÌ¿àµî­šš¿`úŒBoa¹?pÖ*Ø[Á?!Úü”¼?€¤Oæû·?`ÅG@øÕ¼?p¿åE$Ã·?ðbâiû¼?Ø¾žTÓŒÁ?¸‹•ç@&Å?@!ÎÊOˆÍ¿¨ŒçƒÊÅ? ‚ ‚Ý?þ	´J0Gä?ÐUX’È§å?nùÞ€Ìã?Ä†³Ó2WÝ?xÔÚ¥ÚÚ?vãhÐDÙ?bV¨¿Ù?€Íz].Ú?¼¼Å €üÛ?Ö§£é§¡Ü¿°‘:£½• ¿8™Ï?ÑFÔÅZØ?¸¨Ý!õß?Šµ^ðáÆã?ü¾”¡"Bã?
+xÏñã?œù$´bä?tG§U@æ?JŽp»å?äãÔÒQÉæ?ñõi 6944241 í¥ ¦§'­óBL>­ø3À'Æi C’°2ÜÒjš¼áJ 4907452 Üë¬ Â?Œyç†Á)0\5ÝžXQãNÓØLevO“
+ËÔ‚ê% 2041322 L"1 ºN` °·‰ ¬p¶ ¶¯æ ˜u#Ø©I4‰^&¦ž|Ä¸§þ6Û  2153270 6ÓI l8› PÚæ 6áI>’¶ŸÐ¶-öÌ7Jxt«ï2uSgA 1786215 ½2 dP M!n †‚« ;îË pÌþ {à*•µOdoÂ`•2½+ 2819605 º%H øŒ Àâ dÞ9Zé¦Wfÿ4Eƒx¬üæ
+ÌãQ9æ¯=Öm 7198269 td» T9.¤×yw6•âWñV<IüG–\L÷áNR°ÚPFI 4802128 sh® t‚æÒ…qêer+€ˆ­+|Vr>5šäû®útT	+ 2820436 ÔîA ’új ²ƒ‹ Ø~§ 2¾Ú š„ Àõ7vä\Î¨œ9ËÐ~÷â} 1998306 –H ÒŸ r×˜Ë]þàÊtÓ\âUü(ÂìCÿ AÌ‰¬ú_ 1990650 â1 ]†S Ìlv Øž [´ mÜ c‘‡,nJPô&uqt›G- 2967300 =HW Q¬ Ò)%gÿÇ¾ÎôÒ'XÃ}7Û­Â(V¥o‡PY 5853319 ¥Ž· T5ä@ÇP{T‹á6ƒ¿â¢é’ÁøVƒSAÁr‹4 3443570 ]:œ .CS@86LñÔMµ,ÔuöBdå¨79cŸopÇ¶È! 2214070 ? g] x÷€ šxœ 2²Â Ì
+rÉ3öåo°}‘*þ³råÝØ° 1355992 úƒO v.« Ð
+ÔOb˜©ä¦ä¦(^#„`›Á.û´RŠ¡) 2728330 ³c> ç^ óQ c§¸ MÆ× lÓ 9F'>IÂ×dVO†¿S¯÷2 1520375 ’= W/ˆ ±ë õ÷HÔjºN'RC×@ŸÔÖ]³ÄËëàÿïç ˜„ mÀÙ ¦6í ÷/‚`#'o,<Öãža.®LièLµ ê° ²é:  "] Šp“ ZŽ« *­ Þƒ¬ ˜Á Nh”*zÍT®Ä ªh Ú·; Îžt Þ[Ž ûÚ ç™ ¹0îÂ\å‚›
+ƒ¼ÈòpÛÿÿóÿ üH ¸.® øèî <ŠH)—Vï2Z+®zÙMíö!_ÈIšŽtóÿÂ @‡4 ÀS‹ ÀL¶ Ì"ð ÚNœì†DBuVpæuü
+µ
+ç [8& ô{X ½¥ †LÈ ¤ª
+È#-À%Ç;Q¯ìŠ¹›³å0Ôë:Ûÿ¸«äÿÚ/ 4ÿp æÐœ ÓÂÓ žò ãƒÂû§wjIì®ÖP"èòÿæk hÇM ¤Ø‰ :§² 0ææ œØ 4Jô h=°0Þ/GB!tm‘íÿß®þÿRH) _^ ’P ‡¤â ›zî(°VOü²€ÊÖô³¦Æ„g‡ÅÒ¿à@Ì^¾‡¨?v ½ÂÒà?^EQ<à?˜ÿZZ9Ú? …»cÜ?$Š®ˆ/FÖ?¸õxGÔÑ?lne‹Ò?g£îÖ?€#”ÓçÕ?ü ³Ï©ÊÕ?Àe«N¬?Dþž6°à?²(ñÒ-“ã?r'i…¤å?®WdÜé?HæÃé2Ìç?¶œãNã?${^Æí¾à?(^¾fqß?v©ÈÖ¼Îã?¨”ùšå?Ôø²ç3[å?`ŸÀM^ƒâ?
+±#Û?0°‹XdÅç?þ‚ˆIcñð?fŒ¡ê?êPÇTJ.ñ?ô h@úð?ä®1¢6î?ØÿÔã?Ÿð?`ÇŒ|äëñ?²79j‹ñ?|#KJÐíñ?¨QøÜMÕ¿ˆç¸ú¼±¿`ÎW¶×Í?d»|Ì¢×?„ žPF;Ø? ºˆzxÜ?†$ÊZ¥Ù?¼à°X·Õ?,éÂV7¢Ô? ƒÕØ?\E¥]2˜Ü? ÒWítÜ?ÖþRÇ§Ò¿ {©ÈMÃ·?Øp„BÏlß?”ìÀ õï?^3-Ùjñ?ÁmR–ñ?0¾g!üð?’!OßNTí?J[Š[øÜê?þÏöÌé?µ%éê?õê%ÍÆë?@w¶»Kfß?&Jî³íè?è)&Ê3óð?‚‰'qdö?4(”Lè,ô?.b‰UH°÷?â±õÀUô?ˆà2eG6ò?Üø7‹?ôñ?Dùñ'Êò?Œ Ð­ò?ðaÝÃÍ4ò?¶ŠC8YÚ¿<š¸Ã¿À¾ƒjÌ ¹?˜
+ÏL;ÅÏ?|µ]aÓÐ?@&Nn`Ò?ôI¤–DÑ?L‡Ò?HgR`^cÎ?ðT#ý9Ò?à¼i³ú9Ô?ø¤À{¯„Ö?¾…A»ÍØ¿h‰Y½B¨Ð? K‰Rµ¥ê?ÄùaCñ?ÒLPf«Dò?2þžA£ùò?NÐõŒÜé?N ±nùeé?o›1
+è?ˆl:o*=è?ÂOCè?|MŠùêè?vEòïUÜ¿@ý³«N•¿dBÇö×Û?2g6^å?<b3dé?Qv^NÎð?H*]ð?öæÛE®¸ð?†‰]ÂÖžð?N¡õ€ó?Lo¤=–Ló?*ø:±Âó?                                           					  	  	
+
+
+
+
+  
+  
+    ŒŽ
+‘ ’$		“(
+
+”,•0–4—         !    "    #    $    %    &    '         ( !!!!  !  )!""""  "  *"####  #  +#$$$$8$¬$%%%%<%­%&&&&@ &®&''''D"'¯'((((H$(°())))L&)±)****P(*²*++++T*+³+,,,,X,,´,----\.-µ-....`0.¶.////d2/·/0000  0  @01111  1  A12222  2  B23333  3  C34444  4  D45555  5  E56666  6  F67777  7  G78888  8  H89999  9  I9::::  :  J:;;;;  ;  K;<<<<h4<Ì<====l6=Í=>>>>p8>Î>????t:?Ï?@@@@x<@Ð@AAAA|>AÑABBBB€@B  ÒBCCCC„BC!!ÓCDDDDˆDD""ÔDEEEEŒFE##ÕEFFFFHF$$ÖFGGGG”JG%%×GHHHH H   HIIII I  IJJJJ J  JKKKK K  KLLLL L  LMMMM M  MNNNN N  NOOOO O  OPPPP P  PQQQQ Q  	QRRRR R  
+RSSSS S  STTTT™LT&&ŒTUUUUNU''UVVVV¡PV((ŽVWWWW¥RW))WXXXX©TX**XYYYY­VY++‘YZZZZ±XZ,,’Z[[[[µZ[--“[\\\\¹\\..”\]]]]½^]//•]^^^^Á`^00–^____Åb_11—_```` `   `aaaa a  !abbbb b  "bccc& c  #cdddc d  $deeed e  %efffe f  &fgggf g  'ghhhg h  (hiiih i  )ijjji j  *jkkkj k  +klllkÉdl22¬lmmmlÍfm33­mnnnmÑhn44®nooonÕjo55¯opppoÙlp66°pqqqpÝnq77±qrrrqápr88²rsssrårs99³stttsétt::´tuuutívu;;µuvvvuñxv<<¶vwwwvõzw==·wxxxw x  @xyyyx y  Ayzzzy z  Bz{{{z {  C{|||{ |  D|}}}| }  E}~~~} ~  F~~   G€€€ €  H€€   I‚‚‚ ‚  J‚ƒƒƒ‚ ƒ  Kƒ„„„ƒù|„>>Ì„………„ý~…??Í…†††…†@@Î†‡‡‡†ƒ‡AAÏ‡ˆˆˆ‡	…ˆBBÐˆ‰‰‰ˆ‡‰CCÑ‰ŠŠŠ‰‰ŠDDÒŠ‹‹‹Š‹‹EEÓ‹ŒŒŒ‹ŒFFÔŒŒGGÕŽŽŽ!‘ŽHHÖŽŽ%“II×    ‘‘‘ ‘  ‘’’’‘ ’  ’“““’ “  “”””“ ”  ”•••” •  •–––• –  –———– —  —˜˜˜— ˜  ˜™™™˜ ™  	™ššš™ š  
+š›››š ›  ›œœœ›*•œJJŒœœ.—KKžžž2™žLLŽžŸŸŸž6›ŸMMŸ   Ÿ: NN ¡¡¡ >Ÿ¡OO‘¡¢¢¢¡B¡¢PP’¢£££¢F££QQ“£¤¤¤£J¥¤RR”¤¥¥¥¤N§¥SS•¥¦¦¦¥R©¦TT–¦§§§¦V«§UU—§¨¨¨§ ¨   ¨©©©¨ ©  !©ªªª© ª  "ª«««ª «  #«¬¬¬« ¬  $¬­­­¬ ­  %­®®®­ ®  &®¯¯¯® ¯  '¯°°°¯ °  (°±±±° ±  )±²²²± ²  *²³³³² ³  +³´´´³Z­´VV¬´µµµ´^¯µWW­µ¶¶¶µb±¶XX®¶···¶f³·YY¯·¸¸¸·jµ¸ZZ°¸¹¹¹¸n·¹[[±¹ººº¹r¹º\\²º»»»ºv»»]]³»¼¼¼»z½¼^^´¼½½½¼~¿½__µ¾¾½‚Á¾``¶½¾¿¿¾†Ã¿aa·¾¿ÀÀ¿ À  @¿ÀÁÁÀ Á  AÀÁÂÂÁ Â  BÁÂÃÃÂ Ã  CÂÃÄÄÃ Ä  DÃÄÅÅÄ Å  EÄÅÆÆÅ Æ  FÅÆÇÇÆ Ç  GÆÇÈÈÇ È  HÇÈÉÉÈ É  IÈÉÊÊÉ Ê  JÉÊËËÊ Ë  KÊËÌÌËŠÅÌbbÌËÌÍÍÌŽÇÍccÍÌÍÎÎÍ’ÉÎddÎÍÎÏÏÎ–ËÏeeÏÎÏÐÐÏšÍÐffÐÏÐÑÑÐžÏÑggÑÐÑÒÒÑ¢ÑÒhhÒÑÒÓÓÒ¦ÓÓiiÓÒÓÔÔÓªÕÔjjÔÓÔÕÕÔ®×ÕkkÕÔÕÖÖÕ²ÙÖllÖÕÖ××Ö¶Û×mm×

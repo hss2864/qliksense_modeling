@@ -1,0 +1,30 @@
+LOAD
+    OrderDate,
+    TransactionID,
+    Product,
+    Price
+FROM [lib://Local/모델링편/example_Master Calendar.xlsx]
+(ooxml, embedded labels, table is Product);
+
+/* 마스터 캘린더 생성 */
+// (1) 날짜의 시작(Min) & 종료(Max) 일자 추출
+tmp:
+Load min(OrderDate) as minDate,
+	  max(OrderDate) as maxDate
+Resident Product;
+
+LET vMinDate = Floor(peek('minDate', 0, 'tmp'));
+LET vMaxDate = Floor(peek('maxDate', 0, 'tmp'));
+Drop Table tmp;
+
+// (3) 필요한 날짜 필드 생성 (연,월,일 등)
+MasterCalendar:
+Load tmpdate as OrderDate,
+      year(tmpdate) as Order_Year,
+      month(tmpdate) as Order_Month,
+      day(tmpdate) as Order_Day,
+      'Q' & ceil(month(tmpdate) / 3) as Order_Quarter
+;
+// (2) Min ~ Max 사이의 모든 일자의 일련번호 생성
+Load Date($(vMinDate) + IterNo() - 1) as tmpdate
+AutoGenerate 1 While $(vMinDate) + IterNo() -1 <= $(vMaxDate);
