@@ -2,7 +2,7 @@
 <br>
 
 ## 구매하기
-**부크크** : - <br>
+**부크크** : <https://www.bookk.co.kr/book/view/136264> <br>
 **추가 예정** : -
 <br><br>
 
