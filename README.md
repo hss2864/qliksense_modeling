@@ -71,12 +71,13 @@ BI 업계에서 Qlik으로 데이터 분석 시스템 개발과 여러 분야의
   5. HidePrefix & HideSuffix
   6. Peek
   7. 변수(Variable) 설정
-  8. Binary
-  9. Sleep
-  10. 조건문(IF)
-  11. 반복문(For & Next)
-  12. 서브루틴(Sub & Call)
-  13. 증분 로드(Incremental Load)
+  8. Master Calendar
+  9. Binary
+  10. Sleep
+  11. 조건문(IF)
+  12. 반복문(For & Next)
+  13. 서브루틴(Sub & Call)
+  14. 증분 로드(Incremental Load)
 
 
 ### 제6장. 연산자 및 함수
