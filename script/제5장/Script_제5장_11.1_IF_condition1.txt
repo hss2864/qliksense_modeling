@@ -1,8 +1,0 @@
-// cond 라는 값이 1이라고 가정
-set cond=1;
-
-// cond=1 이면, A 테이블을 로드하는 제어문
-If cond=1 then
-A:LOAD * FROM [lib://Local/모델링편/example_IF.xlsx]
-(ooxml, embedded labels, table is A);
-End if

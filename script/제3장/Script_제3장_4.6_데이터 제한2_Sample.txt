@@ -1,6 +1,0 @@
-// 10% 비율로 랜덤 레코드(행) 로드
-Sales:
-Sample 0.1
-LOAD * 
-FROM [lib://Local/입문편/Sales.xlsx]
-(ooxml, embedded labels, table is Sales);
