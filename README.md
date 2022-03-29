@@ -3,6 +3,7 @@
 
 ## 구매하기
 **부크크** : <https://www.bookk.co.kr/book/view/136264> <br>
+**YES24** : <http://www.yes24.com/Product/Goods/108574096> <br>
 **추가 예정** : -
 <br><br>
 
