@@ -5,7 +5,7 @@
 **부크크** : <https://www.bookk.co.kr/book/view/136264> <br>
 **YES24** : <http://www.yes24.com/Product/Goods/108574096> <br>
 **알라딘** : <https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=292249241> <br>
-**추가 예정** : -
+**교보문고** : <http://pod.kyobobook.co.kr/podBook/podBookDetailView.ink?barcode=1400000497180&ejkGb=KOR>
 <br><br>
 
 ## 도서 정보
